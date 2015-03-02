@@ -48,7 +48,7 @@ Time spent: 26 hours
 * [Hamburger menu inspiration](http://uxmag.com/articles/adapting-ui-to-ios-7-the-side-menu)
 
 ### Walkthrough
-![Video Walkthrough](https://github.com/drrajan/codepath-twitter/raw/master/walkthrough.gif)
+![Video Walkthrough](https://github.com/drrajan/codepath-twitter-redux/raw/master/walkthrough.gif)
 
 
 
