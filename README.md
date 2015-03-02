@@ -5,7 +5,7 @@
 
 This is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
 
-Time spent: 24 hours
+Time spent: 26 hours
 
 ### Features
 
@@ -34,6 +34,11 @@ Time spent: 24 hours
 - [x] Include a plus button to Add an Account
 - [x] Swipe to delete an account
 
+#### Notes
+* Had some trouble with the header cell, needed to lookup way to calculate cell height--AutoLayout didn't like to figure it out automatically like normal cells.
+* This in turn caused a constraint warning to come up for 'UIView-Encapsulated-Layout-Width' which I tried to fix by changing constraint priorities (per solutions on StackOverflow) but didn't seem to help. Luckily, this doesn't seem to cause any layout issues, however.
+* Account switching does not save access tokens for multiple users so will have to login again while switching.
+
 #### Credits
 * [AFNetworking](https://github.com/AFNetworking/AFNetworking)
 * [BDBOAuth1Manager](https://github.com/bdbergeron/BDBOAuth1Manager)
@@ -43,8 +48,8 @@ Time spent: 24 hours
 * [Hamburger menu inspiration](http://uxmag.com/articles/adapting-ui-to-ios-7-the-side-menu)
 
 ### Walkthrough
+![Video Walkthrough](https://github.com/drrajan/codepath-twitter/raw/master/walkthrough.gif)
 
-![Video Walkthrough]()
 
 
 
