@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="rosetta-icons-Regular.ttf">
+            <string>icomoon</string>
+            <string>icomoon</string>
+            <string>icomoon</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="130" id="KGk-i7-Jjw" customClass="TweetCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="@TheMichaelMoran" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xW-V7-zk9">
+                        <rect key="frame" x="163" y="32" width="127" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="seV-gX-3n5">
+                        <rect key="frame" x="8" y="32" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="3Go-IT-YZj"/>
+                            <constraint firstAttribute="height" constant="48" id="6R3-D2-mcH"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="4h" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAO-pl-KiU">
+                        <rect key="frame" x="298" y="32" width="14" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="retweet" translatesAutoresizingMaskIntoConstraints="NO" id="GCn-68-8Gq">
+                        <rect key="frame" x="40" y="8" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="Iii-Uv-gwd"/>
+                            <constraint firstAttribute="width" constant="16" id="KGo-mY-uwU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Wu retweeted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXS-FN-54V">
+                        <rect key="frame" x="64" y="8" width="108" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14.5" id="ecs-k2-d0F"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know you can tell if someone is a programmer simply by saying the word &quot;timezones&quot; and seeing if they cringe?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hh-PM-OFF">
+                        <rect key="frame" x="64" y="50" width="248" height="47"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obr-m4-ak4">
+                        <rect key="frame" x="64" y="105" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="37D-2w-NAU"/>
+                            <constraint firstAttribute="height" constant="16" id="bmt-Xf-BRz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="icomoon" family="icomoon" pointSize="18"/>
+                        <state key="normal" title="">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xl1-2V-pof">
+                        <rect key="frame" x="160" y="105" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="AFe-Qu-cpD"/>
+                            <constraint firstAttribute="width" constant="16" id="ili-nQ-8Ee"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="icomoon" family="icomoon" pointSize="17"/>
+                        <state key="normal" title="">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7C-XE-7yO">
+                        <rect key="frame" x="256" y="105" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="0V4-Id-tgV"/>
+                            <constraint firstAttribute="width" constant="16" id="BxX-Nw-9lY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="icomoon" family="icomoon" pointSize="18"/>
+                        <state key="normal" title="">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmG-Ab-wVi">
+                        <rect key="frame" x="178" y="106" width="14" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="86" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qC0-FI-3Xc">
+                        <rect key="frame" x="274" y="106" width="14" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Michael Moran" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzB-9r-0Zi">
+                        <rect key="frame" x="64" y="32" width="91" height="16"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CXS-FN-54V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="6Sd-3D-Red"/>
+                    <constraint firstItem="w7C-XE-7yO" firstAttribute="centerY" secondItem="qC0-FI-3Xc" secondAttribute="centerY" id="7DD-K1-CYB"/>
+                    <constraint firstItem="seV-gX-3n5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="93d-oa-iJO"/>
+                    <constraint firstItem="GCn-68-8Gq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="Aep-DP-27p"/>
+                    <constraint firstItem="w7C-XE-7yO" firstAttribute="leading" secondItem="xl1-2V-pof" secondAttribute="trailing" constant="80" id="BaU-MJ-eMM"/>
+                    <constraint firstItem="xl1-2V-pof" firstAttribute="top" secondItem="8hh-PM-OFF" secondAttribute="bottom" constant="8" id="Bf7-ki-fa3"/>
+                    <constraint firstItem="vmG-Ab-wVi" firstAttribute="top" secondItem="8hh-PM-OFF" secondAttribute="bottom" constant="9" id="FJJ-yg-OWO"/>
+                    <constraint firstItem="8hh-PM-OFF" firstAttribute="top" secondItem="zzB-9r-0Zi" secondAttribute="bottom" constant="2" id="HKD-Wl-PTE"/>
+                    <constraint firstItem="vmG-Ab-wVi" firstAttribute="leading" secondItem="xl1-2V-pof" secondAttribute="trailing" constant="2" id="JwP-n9-JLc"/>
+                    <constraint firstAttribute="trailing" secondItem="PAO-pl-KiU" secondAttribute="trailing" constant="8" id="JzO-dg-YbN"/>
+                    <constraint firstItem="obr-m4-ak4" firstAttribute="top" secondItem="8hh-PM-OFF" secondAttribute="bottom" constant="8" id="KsU-yF-qdj"/>
+                    <constraint firstItem="qC0-FI-3Xc" firstAttribute="leading" secondItem="w7C-XE-7yO" secondAttribute="trailing" constant="2" id="MEh-Ff-1ey"/>
+                    <constraint firstItem="seV-gX-3n5" firstAttribute="top" secondItem="GCn-68-8Gq" secondAttribute="bottom" constant="8" id="MSK-YC-xv7"/>
+                    <constraint firstItem="GCn-68-8Gq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="NDj-pi-ah6"/>
+                    <constraint firstItem="PAO-pl-KiU" firstAttribute="leading" secondItem="1xW-V7-zk9" secondAttribute="trailing" constant="8" id="NxY-1g-ezh"/>
+                    <constraint firstItem="8hh-PM-OFF" firstAttribute="leading" secondItem="seV-gX-3n5" secondAttribute="trailing" constant="8" id="Rvg-eA-O5Z"/>
+                    <constraint firstItem="1xW-V7-zk9" firstAttribute="leading" secondItem="zzB-9r-0Zi" secondAttribute="trailing" constant="8" id="WYm-Oc-gyX"/>
+                    <constraint firstItem="xl1-2V-pof" firstAttribute="leading" secondItem="obr-m4-ak4" secondAttribute="trailing" constant="80" id="Wmp-jk-gR0"/>
+                    <constraint firstItem="w7C-XE-7yO" firstAttribute="top" secondItem="8hh-PM-OFF" secondAttribute="bottom" constant="8" id="ZfO-R3-aMB"/>
+                    <constraint firstItem="zzB-9r-0Zi" firstAttribute="top" secondItem="CXS-FN-54V" secondAttribute="bottom" constant="9.5" id="bLs-Ze-Mfk"/>
+                    <constraint firstItem="zzB-9r-0Zi" firstAttribute="centerY" secondItem="1xW-V7-zk9" secondAttribute="centerY" id="lkk-9X-Zep"/>
+                    <constraint firstItem="obr-m4-ak4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="64" id="mfl-cR-jIj"/>
+                    <constraint firstItem="zzB-9r-0Zi" firstAttribute="leading" secondItem="seV-gX-3n5" secondAttribute="trailing" constant="8" id="sYK-Ht-5BY"/>
+                    <constraint firstItem="CXS-FN-54V" firstAttribute="leading" secondItem="GCn-68-8Gq" secondAttribute="trailing" constant="8" id="tA8-io-Muz"/>
+                    <constraint firstAttribute="trailing" secondItem="8hh-PM-OFF" secondAttribute="trailing" constant="8" id="th3-xu-Zcz"/>
+                    <constraint firstItem="w7C-XE-7yO" firstAttribute="centerY" secondItem="obr-m4-ak4" secondAttribute="centerY" id="uQf-Q6-zSC"/>
+                    <constraint firstItem="8hh-PM-OFF" firstAttribute="top" secondItem="PAO-pl-KiU" secondAttribute="bottom" constant="3" id="vzm-sJ-gJs"/>
+                    <constraint firstItem="qC0-FI-3Xc" firstAttribute="top" secondItem="8hh-PM-OFF" secondAttribute="bottom" constant="9" id="w7L-Za-o0F"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="obr-m4-ak4" secondAttribute="bottom" constant="8.5" id="yAv-nK-Pgs"/>
+                    <constraint firstItem="w7C-XE-7yO" firstAttribute="centerY" secondItem="vmG-Ab-wVi" secondAttribute="centerY" id="zGl-K4-oBb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="createdAtLabel" destination="PAO-pl-KiU" id="Sjx-ut-4SM"/>
+                <outlet property="favoriteButton" destination="w7C-XE-7yO" id="mro-0R-svD"/>
+                <outlet property="favoriteCountLabel" destination="qC0-FI-3Xc" id="UEy-dl-Wfh"/>
+                <outlet property="nameLabel" destination="zzB-9r-0Zi" id="tMX-od-oDx"/>
+                <outlet property="profileImageView" destination="seV-gX-3n5" id="b1Y-Xe-pCL"/>
+                <outlet property="replyButton" destination="obr-m4-ak4" id="ZaA-TX-n4d"/>
+                <outlet property="retweetButton" destination="xl1-2V-pof" id="etz-pw-w5l"/>
+                <outlet property="retweetCountLabel" destination="vmG-Ab-wVi" id="L2G-36-QjS"/>
+                <outlet property="retweetLabel" destination="CXS-FN-54V" id="IYQ-K0-0d4"/>
+                <outlet property="rtHeightConstraint" destination="ecs-k2-d0F" id="Pcs-wg-ilj"/>
+                <outlet property="rtImgHeightConstraint" destination="Iii-Uv-gwd" id="1Bv-bV-2qd"/>
+                <outlet property="tweetBodyLabel" destination="8hh-PM-OFF" id="kWi-u3-pEL"/>
+                <outlet property="twitterHandleLabel" destination="1xW-V7-zk9" id="wM2-9O-FU1"/>
+            </connections>
+            <point key="canvasLocation" x="537" y="443"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="retweet" width="9" height="8"/>
+    </resources>
+</document>
