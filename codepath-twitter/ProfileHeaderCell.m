@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *followersLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *profileBannerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *b;
 
 @end
 
@@ -58,7 +59,12 @@
     
     self.descriptionLabel.preferredMaxLayoutWidth = self.descriptionLabel.bounds.size.width;
     [self.profileImageView setImageWithURL:[NSURL URLWithString:user.profileImageUrl]];
+    
+    if (user.profileBannerUrl) {
     [self.profileBannerView setImageWithURL:[NSURL URLWithString:user.profileBannerUrl]];
+    } else {
+        self.b.constant = 0.f;
+    }
     NSLog(@"banner: %@", user.profileBannerUrl);
 
 }

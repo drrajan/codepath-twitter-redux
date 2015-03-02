@@ -12,6 +12,7 @@
 #import "TwitterClient.h"
 #import "TweetCell.h"
 #import "AccountsViewController.h"
+#import "TweetDetailViewController.h"
 
 @interface ProfileViewController () <UITableViewDelegate, UITableViewDataSource, ComposeViewControllerDelegate>
 
@@ -122,9 +123,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
-    
+
     TweetCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TweetCell"];
     [cell setSeparatorInset:UIEdgeInsetsZero];
     cell.preservesSuperviewLayoutMargins = NO;
@@ -174,17 +173,14 @@
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView xheightForHeaderInSection:(NSInteger)section {
-    return 250;
-}
-
-- (UIView *)tableView:(UITableView *)tableView xviewForHeaderInSection:(NSInteger)section {
-    ProfileHeaderCell *headerView = [tableView dequeueReusableCellWithIdentifier:@"ProfileHeaderCell"];
-    headerView.user = self.user;
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    TweetDetailViewController *vc = [[TweetDetailViewController alloc] init];
     
+    vc.tweet = self.tweets[indexPath.row];
     
-    return headerView;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark Compose View methods

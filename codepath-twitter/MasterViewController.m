@@ -22,15 +22,13 @@
 
 CGFloat const scaleFactor = 0.7f;
 static CGFloat const edgeTranslate = 20.0f;
-static NSTimeInterval const animateDuration = 1;
+static NSTimeInterval const animateDuration = 0.3;
 static NSTimeInterval const animateDelay = 0.2;
 static NSTimeInterval const animateCloseDuration = 0.3;
 static NSTimeInterval const animateSwitchDuration = 0.3;
 
 CGPoint mainOriginalCenter;
 CGPoint mainClosedCenter;
-CGRect mainOriginalFrame;
-CGRect menuOriginalFrame;
 CGAffineTransform mainOpenTransform;
 CGAffineTransform newTransform;
 CGAffineTransform menuClosedTransform;
@@ -68,13 +66,20 @@ CGFloat currScale;
     [self.view insertSubview:self.menuViewController.view belowSubview:self.masterContentView];
     [self.menuViewController didMoveToParentViewController:self];
     
-    mainOpenTransform = [self openTransformForView:self.masterContentView];
-    menuClosedTransform = [self transformForClosedMenu];
+    CGFloat transformSize = scaleFactor;
+    CGAffineTransform transformTranslate = CGAffineTransformTranslate(self.masterContentView.transform, CGRectGetMidX(self.masterContentView.bounds) + edgeTranslate, 0);
+    mainOpenTransform = CGAffineTransformScale(transformTranslate, transformSize, transformSize);
+    
+    CGFloat transformValue = 1.0f / scaleFactor;
+    CGAffineTransform transformScale = CGAffineTransformScale(self.menuViewController.view.transform, transformValue, transformValue);
+    menuClosedTransform = CGAffineTransformTranslate(transformScale, -(CGRectGetMidX(self.view.bounds)) - edgeTranslate, 0);
+    
     mainOriginalCenter = self.mainViewController.view.center;
-//    menuOriginalCenter = self.menuViewController.view.center;
-    menuOriginalFrame = self.menuViewController.view.frame;
     translateMax = CGRectGetMidX(self.masterContentView.bounds) + edgeTranslate;
-    [self updateMenuViewWithTransform:menuClosedTransform];
+    
+    self.menuViewController.view.transform = menuClosedTransform;
+    self.menuViewController.view.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
+    self.menuViewController.view.bounds = self.view.bounds;
     
     self.view.userInteractionEnabled = YES;
     self.masterContentView.userInteractionEnabled = YES;
@@ -156,7 +161,7 @@ CGFloat currScale;
     }
 
     self.menuOpen = YES;
-    self.menuViewController.view.transform = [self transformForClosedMenu];
+    self.menuViewController.view.transform = menuClosedTransform;
     
     [UIView animateWithDuration:animateDuration
                           delay:0.0

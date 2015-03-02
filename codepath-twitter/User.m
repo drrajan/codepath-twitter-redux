@@ -29,7 +29,13 @@ NSString * const UserDidSwitchNotification = @"UserDidSwitchNotification";
         self.userid = dictionary[@"id_str"];
         self.screenname = [NSString stringWithFormat:@"@%@", dictionary[@"screen_name"]];
         self.profileImageUrl = dictionary[@"profile_image_url"];
-        self.profileBannerUrl = [NSString stringWithFormat:@"%@/mobile_retina", dictionary[@"profile_banner_url"]];
+        if ([dictionary objectForKey:@"profile_banner_url"]) {
+        //if (dictionary [@"profile_banner_url"] != (id)[NSNull null]) {
+            self.profileBannerUrl = [NSString stringWithFormat:@"%@/mobile_retina", dictionary[@"profile_banner_url"]];
+        } else {
+            self.profileBannerUrl = nil;
+        }
+        
         self.profileBackgroundColor = dictionary[@"profile_background_color"];
         self.location = dictionary[@"location"];
         self.tagline = dictionary[@"description"];

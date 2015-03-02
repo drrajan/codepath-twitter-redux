@@ -140,6 +140,7 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
+                <outlet property="b" destination="kky-uN-PNv" id="3aN-Ae-ef9"/>
                 <outlet property="containerView" destination="H2p-sc-9uM" id="MdF-D8-Jfm"/>
                 <outlet property="descriptionLabel" destination="Ifs-jh-vHd" id="ReP-Lc-OEJ"/>
                 <outlet property="followLabel" destination="ni3-Zl-QhJ" id="Epu-XG-Q4f"/>
